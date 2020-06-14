@@ -135,7 +135,6 @@ h4 {
 /* section */
 .section {
   padding-bottom: 5rem;
-  margin: 0 30px;
   padding: 10px;
 }
 
@@ -303,7 +302,38 @@ nav {
 }
 /* hero */
 /*
-=============== 
+/*--------------------------------------------------
+  Container
+--------------------------------------------------*/
+.l-container {
+  position: relative;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.l-container.is-fluid {
+  max-width: 100% !important;
+}
+
+@media (min-width: 768px) {
+  .l-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .l-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .l-container {
+    max-width: 1250px;
+  }
+}
+/*=============== 
 Video
 ===============
 */
@@ -501,6 +531,10 @@ Modal
   background: url("./images/modal-bg.jpg") left/cover no-repeat;
   display: grid;
   place-items: center;
+}
+.banner2-container {
+  display: flex;
+  justify-content: center;
 }
 .banner2 {
   background: var(--clr-white);
