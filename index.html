@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben Clauser</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="./fontawesome/css/all.min.css"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+     <!-- preloader -->
+     <div class="preloader">
+      <img src="preloader.gif" alt="preloader" class="preloader__item" />
+    </div>
+    <header id="home">
+      <!-- navbar -->
+      <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <img src="./images/white-logo.png" class="logo res" alt="logo" />
+            <img src="./images/logo1.png" class="logo2 show" alt="">
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li class="list">
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li class="list">
+                <a href="#about" class="scroll-link">about</a>
+              </li>
+              <li class="list">
+                <a href="#services" class="scroll-link">projects</a>
+              </li>
+              <li class="list">
+                <a href="#tours" class="scroll-link">contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- banner -->
+      <div class="banner">
+        <video controls muted autoplay loop class="video-container">
+          <source src="./video.mp4" type="video/mp4" />
+        </video>
+       
+        <button class="switch-btn">
+          <span>
+            play
+          </span>
+          <span>
+            pause
+          </span>
+          <span class="switch"></span>
+        </button>
+        <div class="container">
+          <h1>ben clauser</h1>
+          <p>
+            Front-end Developer
+          </p>
+          <a href="#tours" class="scroll-link btn btn-white">View Resume</a>
+          <div class="social-container">
+             <a href="" class="social"><i class="fab fa-github"></i></a>
+              <a href="" class="social"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+      </div>
+    </header>
+    <!-- about -->
+    <section id="about" class="section">
+      <!-- <div class="title">
+        <h2>about <span>us</span></h2>
+      </div> -->
+       <!-- hero -->
+    <header class="hero">
+      <div class="banner2">
+        <h1>Certificates & Licenses</h1>
+        <button class="btn modal-btn">
+          View
+        </button>
+      </div>
+    </header>
+    <!-- modal -->
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <div class="slider-container">
+          <div class="slide">
+            <img src="./images/cert1.jpg" class="slide-img" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./images/cert2.png" class="slide-img" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./images/cert3.png" class="slide-img" alt="" />
+          </div>
+        </div>
+        <div class="btn-container-slide">
+          <button type="button" class="prevBtn">
+            prev
+          </button>
+          <button type="button" class="nextBtn">
+            next
+          </button>
+        </div>
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+    </section>
+    <!-- services -->
+    
+    <section id="services" class="section">
+      <div class="title">
+        <h2>projects</h2>
+      </div>
+      <article class="about">
+        <!-- btn container -->
+        <div class="btn-container">
+          <button class="tab-btn active" data-id="history">JS Apps</button>
+          <button class="tab-btn" data-id="vision">Web Projects</button>
+          <button class="tab-btn" data-id="goals">Game Projects</button>
+        </div>
+        <div class="about-content">
+          <!-- single item -->
+          <div class="content active" id="history">
+            <h4>JS Projects</h4>
+            <div class="card">
+              <div class="card-item">
+                <h4>Speech Reader</h4>
+                <a href="" class="card-link"><img src="./images/speech.jpg" alt="" class="card-img"></a>
+                <div class="card-btn-container">
+                  <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                  <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                </div>
+              </div>
+              <div class="card-item">
+                <h4>Movie Battle</h4>
+                <a href="" class="card-link"><img src="./images/moviefight.jpg" alt="" class="card-img"></a>
+                <div class="card-btn-container">
+                  <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                  <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                </div>
+              </div>
+              <div class="card-item">
+                <h4>Seat Selector</h4>
+                <a href="" class="card-link"><img src="./images/movieseat.png" alt="" class="card-img"></a>
+                <div class="card-btn-container">
+                  <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                  <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                </div> 
+              </div>
+              <div class="card-item">
+                <h4>Exchange Calculator</h4>
+                <a href="" class="card-link"><img src="./images/exchangerate.jpg" alt="" class="card-img"></a>
+                <div class="card-btn-container">
+                  <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                  <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                </div>
+              </div>
+            </div>
+            <div class="more-container">
+               <button class="more-btn">Show More</button>
+            </div>
+            <div class="more">
+              <div class="card">
+                <div class="card-item">
+                  <h4>Timer</h4>
+                  <a href="" class="card-link"><img src="./images/timer.png" alt="" class="card-img"></a>
+                  <div class="card-btn-container">
+                    <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                    <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                  </div>
+                </div>
+                <div class="card-item">
+                  <h4>Form Validator</h4>
+                  <a href="" class="card-link"><img src="./images/form.png" alt="" class="card-img"></a>
+                  <div class="card-btn-container">
+                    <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                    <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                  </div>
+                </div>
+                <div class="card-item">
+                  <h4>Secret Message</h4>
+                  <a href="" class="card-link"><img src="./images/message.png" alt="" class="card-img"></a>
+                  <div class="card-btn-container">
+                    <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                    <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                  </div> 
+                </div>
+                <div class="card-item">
+                  <h4>Project</h4>
+                  <a href="" class="card-link"><img src="./images/pic03.jpg" alt="" class="card-img"></a>
+                  <div class="card-btn-container">
+                    <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                    <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+          <!-- end of single item -->
+          <!-- single item -->
+          <div class="content" id="vision">
+            <h4>Web Projects</h4>
+            <div class="card">
+              <div class="card-item">
+                <h4>Wordpress News Site</h4>
+                <a href="" class="card-link"><img src="./images/res-page-wordpress.jpg" alt="" class="card-img"></a>
+                <div class="card-btn-container">
+                  <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                  <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                </div>
+              </div>
+              <div class="card-item">
+                <h4>Custom WP Theme</h4>
+                <a href="" class="card-link"><img src="./images/res-wrd-theme.jpg" alt="" class="card-img"></a>
+                <div class="card-btn-container">
+                  <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                  <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                </div>
+              </div>
+              <div class="card-item">
+                <h4>Image Gallery</h4>
+                <a href="" class="card-link"><img src="./images/nickles.jpg" alt="" class="card-img"></a>
+                <div class="card-btn-container">
+                  <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                  <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                </div> 
+              </div>
+              <div class="card-item">
+                <h4>Project Landing<br>Site</h4>
+                <a href="" class="card-link"><img src="./images/project-landing.jpg" alt="" class="card-img"></a>
+                <div class="card-btn-container">
+                  <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                  <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of single item -->
+          <!-- single item -->
+          <div class="content" id="goals">
+            <h4>Game Projects</h4>
+            <div class="card">
+              <div class="card-item">
+                <h4>Matter JS Maze</h4>
+                <a href="" class="card-link"><img src="./images/maze.png" alt="" class="card-img"></a>
+                <div class="card-btn-container">
+                  <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                  <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                </div>
+              </div>
+              <div class="card-item">
+                <h4>Physics Engine</h4>
+                <a href="" class="card-link"><img src="./images/shapes.jpg" alt="" class="card-img"></a>
+                <div class="card-btn-container">
+                  <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                  <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                </div>
+              </div>
+              <div class="card-item">
+                <h4>Project</h4>
+                <a href="" class="card-link"><img src="./images/pic03.jpg" alt="" class="card-img"></a> 
+                <div class="card-btn-container">
+                  <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                  <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                </div>
+              </div>
+              <div class="card-item">
+                <h4>Project</h4>
+                <a href="" class="card-link"><img src="./images/pic03.jpg" alt="" class="card-img"></a>
+                <div class="card-btn-container">
+                  <a href="" class="card-btn"><i class="fa fa-globe"></i>APP</a>
+                  <a href="" class="card-btn"><i class="fab fa-github"></i>code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of single item -->
+        </div>
+      </article>
+      
+     
+    </section>
+    <!-- contact -->
+    <section id="tours" class="section">
+      <div class="title">
+        <h2>contact</h2>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <p>
+        copyright &copy; Ben Clauser Ringia
+        <span id="date"></span>. all rights reserved
+      </p>
+    </footer>
+    <a class="scroll-link top-link" href="#home">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- javascript -->
+    <script src="app.js"></script>
+    <script defer src="./fontawesome/js/all.js"></script>
+  </body>
+</html>
