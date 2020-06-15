@@ -868,9 +868,18 @@ Slider
 .contact-item {
   display: flex;
 }
-.contact-child  {
-  flex: 0 0 50%;
-  max-width: 50%;
+@media (max-width: 450px) {
+  .contact-item {
+    justify-content: center;
+  }
+}
+
+
+@media(min-width: 450px) {
+  .contact-child  {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 .contact-child.white-bg {
   background-color: #fff;
