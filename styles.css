@@ -136,6 +136,8 @@ h4 {
 .section {
   padding-bottom: 5rem;
   padding: 10px;
+  margin-bottom: 50px;
+  border-radius: 10px;
 }
 
 .section-center {
@@ -462,7 +464,7 @@ button {
   display: block;
   transition: var(--transition);
 }
-.slide .switch {
+.slide1 .switch {
   left: 50%;
 }
 /* sections and title */
@@ -479,7 +481,7 @@ button {
 }
 footer {
   background: var(--clr-grey-1);
-  padding: 5rem 1rem;
+  padding: 1rem;
 }
 footer p {
   color: var(--clr-white);
@@ -487,6 +489,7 @@ footer p {
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   margin-bottom: 0;
+  font-size: 12px;
 }
 
 .top-link {
@@ -851,4 +854,32 @@ Slider
   .slider-container {
     height: 65vh;
   }
+}
+
+/*========================
+      CONTACT
+=========================*/
+
+.contact {
+  background: url(./images/contact-bg.jpg) center/cover;
+  border-radius: 10px;
+  padding: 20px;
+}
+.contact-item {
+  display: flex;
+}
+.contact-child  {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.contact-child.white-bg {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.contact-card p:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+.contact-card p i {
+  color: #49a6e9;
 }

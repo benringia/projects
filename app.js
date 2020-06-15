@@ -87,11 +87,11 @@ const btn = document.querySelector(".switch-btn");
 const video = document.querySelector(".video-container");
 
 btn.addEventListener("click", function () {
-  if (!btn.classList.contains("slide")) {
-    btn.classList.add("slide");
+  if (!btn.classList.contains("slide1")) {
+    btn.classList.add("slide1");
     video.pause();
   } else {
-    btn.classList.remove("slide");
+    btn.classList.remove("slide1");
     video.play();
   }
 });
