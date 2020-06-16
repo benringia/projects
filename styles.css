@@ -299,7 +299,7 @@ nav {
     font-size: .8rem;
   }
   .list:not(:last-of-type) {
-    border-bottom: 1px solid #333
+    border-bottom: 1px solid #a9a9a9;
   }
 }
 /* hero */
