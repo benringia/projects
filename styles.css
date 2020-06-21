@@ -97,7 +97,7 @@ h3 {
 h4 {
   text-transform: capitalize;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
+  margin-top: 10px;
   font-family: var(--ff-primary);
 }
 
@@ -113,7 +113,8 @@ h4 {
   display: inline-block;
   transition: var(--transition);
   font-size: 0.875rem;
-  border: 2px solid var(--clr-black);
+  border: none;
+  outline: none;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
@@ -550,14 +551,15 @@ Modal
 }
 .modal-btn {
   margin-top: 2rem;
-  background: var(--clr-primary-5);
-  border-color: var(--clr-primary-5);
+  background: #333;
   color: var(--clr-white);
   outline: none;
 }
 .modal-btn:hover {
   background: transparent;
-  color: var(--clr-primary-5);
+  color: #333;
+  border: 1px solid #333 !important;
+  font-weight: bold;
 }
 .modal-overlay {
   position: fixed;
@@ -614,9 +616,7 @@ Modal
 .card-item {
   flex: 0 0 24%;
   max-width: 24%;
-  box-shadow: 0 3px 7px rgba(0,0,0, 0.5);
-  padding: 10px;
-  border-radius: 10px;
+  box-shadow: 0 2px 3px rgba(0,0,0, 0.2);
 }
 @media screen and (max-width: 800px) {
   .card-item {
@@ -636,11 +636,11 @@ Modal
   width: 100%;
   object-fit: cover;
   height: 200px;
-  transition: all 0.2s linear;
+  transition: all 0.1s linear;
 }
 @media screen and (min-width: 900px) {
   .card-img {
-    height: 110px;
+    height: 150px;
   }
 }
 .card-img:hover {
@@ -652,8 +652,9 @@ Modal
 }
 
 .card-btn {
-  border: 1px solid #49a6e9;
-  background-color: #49a6e9;
+  
+  background-color: #333;
+  border: 1px solid #333;
   width: 70px;
   text-align: center;
   color: #fff;
@@ -661,10 +662,11 @@ Modal
   margin-top: 10px;
   transition: all 0.1s linear;
 }
+
 .card-btn:hover {
-  border: 1px solid #49a6e9;
+  border: 1px solid #333;
   background-color: transparent;
-  color: #49a6e9;
+  color: #333;
 }
 .card-btn:not(:last-of-type) {
   margin-right: 5px;
@@ -672,6 +674,7 @@ Modal
 .card-btn-container {
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 
 
@@ -764,12 +767,19 @@ Modal
   text-align: right;
 }
 .more-btn {
-  background-color: var(--clr-primary-5);
-  border-color: var(--clr-primary-5);
+  background-color: transparent;
+  border: 2px solid #333;
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
   margin: 5px;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.2s linear;
+
+}
+.more-btn:hover {
+  background-color: #333;
   color: #fff;
 }
 
