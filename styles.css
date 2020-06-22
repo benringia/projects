@@ -125,20 +125,21 @@ h4 {
 }
 .btn-white {
   color: var(--clr-white);
-  border-color: var(--clr-white);
+  border: 2px solid #fff;
   border-radius: 0;
   padding: 0.5rem 1rem;
 }
-.btn:hover {
+
+.btn-white:hover {
   background: var(--clr-white);
-  color: var(--clr-secondary);
+  color: #333;
+  font-weight: bold;
+
 }
 /* section */
 .section {
   padding-bottom: 5rem;
-  padding: 10px;
   margin-bottom: 50px;
-  border-radius: 10px;
 }
 
 .section-center {
@@ -364,7 +365,6 @@ header {
   position: relative;
   display: grid;
   place-items: center;
-  margin-bottom: 20px;
 }
 .logo {
   display: block;
@@ -498,7 +498,7 @@ footer p {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: var(--clr-secondary);
+  background: #333;
   width: 2rem;
   height: 2rem;
   display: grid;
@@ -532,9 +532,10 @@ Modal
 */
 .hero {
   min-height: 100%;
-  background: url("./images/modal-bg.jpg") left/cover no-repeat;
+  /* background: url("./images/modal-bg.jpg") left/cover no-repeat; */
   display: grid;
   place-items: center;
+  padding: 30px;
 }
 .banner2-container {
   display: flex;
@@ -614,19 +615,53 @@ Modal
   flex-wrap: wrap;
 }
 .card-item {
-  flex: 0 0 24%;
-  max-width: 24%;
+  flex: 0 0 25%;
+  max-width: 25%;
   box-shadow: 0 2px 3px rgba(0,0,0, 0.2);
+  position: relative;
+  height: 100%;
+}
+@media screen and (min-width: 800px) {
+  .card-item:not(:last-of-type) {
+    border-top: 1px solid #dae2ec;
+  }
+}
+
+.card-fx {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s linear;
+}
+.card-fx h4 {
+  color:#fff;
+  font-size: 20px;
+}
+.card-item:hover .card-fx {
+  opacity: 1;
+  pointer-events: all;
 }
 @media screen and (max-width: 800px) {
+  .card-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
   .card-item {
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 20px;
   }
-}
-.card-item h4 {
-  height: 40px;
 }
 .card-link {
   overflow: hidden;
@@ -635,38 +670,39 @@ Modal
 .card-img {
   width: 100%;
   object-fit: cover;
-  height: 200px;
-  transition: all 0.1s linear;
+  transition: all 0.1s linear;;
 }
 @media screen and (min-width: 900px) {
-  .card-img {
-    height: 150px;
-  }
+ 
 }
-.card-img:hover {
+.card-item:hover .card-img {
   transform: scale(1.1);
 }
 
 .card h4 {
   text-align: center;
 }
+small {
+  font-size: 14px;
+  font-weight: lighter;
+}
 
 .card-btn {
   
-  background-color: #333;
-  border: 1px solid #333;
+  background-color: #fff;
+  border: 1px solid #fff;
   width: 70px;
   text-align: center;
-  color: #fff;
+  color: #000;
   border-radius: 5px;
   margin-top: 10px;
   transition: all 0.1s linear;
 }
 
 .card-btn:hover {
-  border: 1px solid #333;
+  border: 1px solid #fff;
   background-color: transparent;
-  color: #333;
+  color: #fff;
 }
 .card-btn:not(:last-of-type) {
   margin-right: 5px;
@@ -738,19 +774,24 @@ Modal
 }
 .tab-btn:hover:not(.active) {
   background: var(--clr-primary-10);
-  color: var(--clr-primary-5);
+  color:#333;
 }
 .about-content {
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
-  padding: 2rem 1.5rem;
+}
+@media screen and (max-width: 500px) {
+  .about-content {
+    padding: 10px;
+  }
 }
 /* hide content */
 .content {
   display: none;
 }
 .tab-btn.active {
-  background: var(--clr-white);
+  background: #333;
+  color: white;
 }
 .content.active {
   display: block;
@@ -881,7 +922,6 @@ Slider
 
 .contact {
   background: url(./images/contact-bg.jpg) center/cover;
-  border-radius: 10px;
   padding: 20px;
 }
 .contact-item {
