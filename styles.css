@@ -666,8 +666,8 @@ Modal
 }
 .card-img {
   width: 100%;
-  object-fit: cover;
-  transition: all 0.1s linear;;
+  height: 100%;
+  transition: all 0.1s linear;
 }
 @media screen and (min-width: 900px) {
  
