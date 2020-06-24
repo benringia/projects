@@ -447,7 +447,7 @@ button {
   font-size: 10px;
   cursor: pointer;
   text-transform: capitalize;
-  color: var(--clr-primary-5);
+  color:#333;
 }
 .switch {
   position: absolute;
@@ -455,7 +455,7 @@ button {
   height: 100%;
   top: 0;
   left: 0;
-  background: var(--clr-primary-5);
+  background: #333;
   border-radius: var(--radius);
   margin: 0;
   display: block;
