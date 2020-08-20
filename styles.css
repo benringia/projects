@@ -152,6 +152,9 @@ h4 {
     width: 95vw;
   }
 }
+.section {
+  background: var(--clr-grey-10) !important;
+}
 main {
   min-height: 100vh;
   display: grid;
@@ -478,7 +481,7 @@ button {
 }
 
 #services {
-  background: var(--clr-white);
+  background: var(--clr-grey-10);
 }
 footer {
   background: #000;
@@ -747,6 +750,7 @@ small {
   border-top-right-radius: var(--radius);
   display: flex;
   border-bottom: 1px solid #dae2ec;
+  background: var(--clr-grey-10);
 }
 .tab-btn:nth-child(1) {
   border-top-left-radius: var(--radius);
