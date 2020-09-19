@@ -44,8 +44,6 @@ Variables
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-secondary: hsla(182, 63%, 54%);
   --clr-black: #222;
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
@@ -70,7 +68,9 @@ html {
   box-sizing: border-box;
 }
 body {
-  font-family: var(--ff-secondary);
+  font-family: sofia-pro, sans-serif;
+font-style: normal;
+font-weight: 100;
   background: var(--clr-grey-10);
   color: var(--clr-grey-1);
 }
@@ -92,7 +92,6 @@ h3 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
 }
 h4 {
   text-transform: capitalize;
@@ -168,8 +167,10 @@ Scroll
 /* navbar */
 nav {
   background: var(--clr-white);
-  padding: 0.6rem 1rem;
+  padding: 0.4rem 1rem;
   width: 100%;
+  position: fixed;
+    z-index: 9;
 }
 /* fixed nav */
 .fixed-nav {
@@ -250,6 +251,12 @@ nav {
   transition: var(--transition);
   font-weight: bold;
   padding: 0.75rem 0;
+}
+
+@media (min-width:800px) {
+  .links-container {
+    display: none;
+  }
 }
 .links a:hover {
   color: var(--clr-grey-1);
@@ -366,8 +373,18 @@ Video
 header {
   min-height: 100vh;
   position: relative;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:url(./images/atf.jpg) center/cover no-repeat;
+}
+header:after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+
 }
 .logo {
   display: block;
@@ -548,7 +565,7 @@ Modal
   background: var(--clr-white);
   padding: 10px 0;
   border-radius: var(--radius);
-  box-shadow: 0 5px 15px rgba(0,0,0, 0.5);
+  box-shadow: 0 0px 5px -3px rgba(0,0,0, 0.5);
   text-align: center;
   width: 100%;
   max-width: var(--fixed-width);
