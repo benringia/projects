@@ -574,6 +574,11 @@ Modal
   width: 100%;
   max-width: var(--fixed-width);
 }
+
+.banner2 h1 {
+  text-transform: lowercase;
+  font-weight: normal;
+}
 .modal-btn {
   margin-top: 2rem;
   background: #333;
