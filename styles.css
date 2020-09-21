@@ -358,7 +358,7 @@ header {
   transition: all 0.3s ease;
 }
 .logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .video-container {
@@ -416,7 +416,7 @@ header {
   margin-right: 20px;
 }
 .social:hover {
-  transform: scale(1.2) rotate(20deg);
+  transform: scale(1.1) rotate(10deg);
 }
 /* switch button */
 button {
