@@ -167,7 +167,7 @@ main {
 }
 .section {
   border-top: 1px solid #e6e6e6;
-  padding: 30px 0;
+  padding: 45px 0;
 }
 /*
 =============== 
@@ -231,9 +231,7 @@ nav {
   width: 190px;
   height: 80px;;
 }
-.img-responsive {
-  width: 100%;
-}
+
 .logo2 {
   height: 45px;
   width: 50px;
@@ -479,6 +477,20 @@ button {
     font-weight: 300;
     line-height: 1;
     margin-bottom: 30px;
+}
+.title02 {
+  color: #333333;
+  font-size:2.8em;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.title04 {
+  color: #333333;
+  font-size:1.2em;
+  font-weight: 400;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 
@@ -745,6 +757,15 @@ Slider
   color: #49a6e9;
 }
 
+
+/*== CARD ==*/
+  .card-item {
+    background: #FAFAFA;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+  }
+
+
 /*== UTILITIES==*/
 
 .margin-btm10 {
@@ -753,4 +774,23 @@ Slider
 
 .margin-btm20 {
   margin-bottom: 20px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-item4 {
+  flex: 0 0 23.6%;
+  max-width: 23.6%;
+}
+
+.img-responsive {
+  width: 100%;
+}
+.block {
+  display: block;
+}
+.fs15 {
+  font-size: 15px;
 }
