@@ -2,24 +2,16 @@
 
 // ********** set date ************
 // select span
-const date = document.getElementById("date");
-date.innerHTML = new Date().getFullYear();
+// const date = document.getElementById("date");
+// date.innerHTML = new Date().getFullYear();
 
 // ********** close links ************
 const navToggle = document.querySelector(".nav-toggle");
-const linksContainer = document.querySelector(".links-container");
+const linksContainer = document.querySelector(".header");
 const links = document.querySelector(".links");
 
 navToggle.addEventListener("click", function () {
-  // linksContainer.classList.toggle("show-links");
-
-  const linksHeight = links.getBoundingClientRect().height;
-  const containerHeight = linksContainer.getBoundingClientRect().height;
-  if (containerHeight === 0) {
-    linksContainer.style.height = `${linksHeight}px`;
-  } else {
-    linksContainer.style.height = 0;
-  }
+  linksContainer.classList.toggle("active")
   // console.log(linksContainer.getBoundingClientRect());
 });
 
@@ -106,88 +98,88 @@ scrollLinks.forEach((link) => {
 
 //MODAL
 
-const modalBtn = document.querySelector(".modal-btn");
-const modal = document.querySelector(".modal-overlay");
-const closeBtn = document.querySelector(".close-btn");
+// const modalBtn = document.querySelector(".modal-btn");
+// const modal = document.querySelector(".modal-overlay");
+// const closeBtn = document.querySelector(".close-btn");
 
-modalBtn.addEventListener("click", function () {
-  modal.classList.add("open-modal");
-});
-closeBtn.addEventListener("click", function () {
-  modal.classList.remove("open-modal");
-});
+// modalBtn.addEventListener("click", function () {
+//   modal.classList.add("open-modal");
+// });
+// closeBtn.addEventListener("click", function () {
+//   modal.classList.remove("open-modal");
+// });
 
 //TABS
-const about = document.querySelector(".about");
-const btns = document.querySelectorAll(".tab-btn");
-const articles = document.querySelectorAll(".content");
-about.addEventListener("click", function (e) {
-  const id = e.target.dataset.id;
-  if (id) {
-    // remove selected from other buttons
-    btns.forEach(function (btn) {
-      btn.classList.remove("active");
-    });
-    e.target.classList.add("active");
-    // hide other articles
-    articles.forEach(function (article) {
-      article.classList.remove("active");
-    });
-    const element = document.getElementById(id);
-    element.classList.add("active");
-  }
-});
+// const about = document.querySelector(".about");
+// const btns = document.querySelectorAll(".tab-btn");
+// const articles = document.querySelectorAll(".content");
+// about.addEventListener("click", function (e) {
+//   const id = e.target.dataset.id;
+//   if (id) {
+//     // remove selected from other buttons
+//     btns.forEach(function (btn) {
+//       btn.classList.remove("active");
+//     });
+//     e.target.classList.add("active");
+//     // hide other articles
+//     articles.forEach(function (article) {
+//       article.classList.remove("active");
+//     });
+//     const element = document.getElementById(id);
+//     element.classList.add("active");
+//   }
+// });
 
 //show more 
-const more = document.querySelector('.more-btn');
-const moreActive = document.querySelector('.more');
-more.addEventListener('click', function() {
-  moreActive.classList.toggle("active")
-})
+// const more = document.querySelector('.more-btn');
+// const moreActive = document.querySelector('.more');
+// more.addEventListener('click', function() {
+//   moreActive.classList.toggle("active")
+// })
 
 
 
 //slider 
-const slides = document.querySelectorAll(".slide");
-const nextBtn = document.querySelector(".nextBtn");
-const prevBtn = document.querySelector(".prevBtn");
-slides.forEach(function (slide, index) {
-  slide.style.left = `${index * 100}%`;
-});
-let counter = 0;
-nextBtn.addEventListener("click", function () {
-  counter++;
-  carousel();
-});
+// const slides = document.querySelectorAll(".slide");
+// const nextBtn = document.querySelector(".nextBtn");
+// const prevBtn = document.querySelector(".prevBtn");
+// slides.forEach(function (slide, index) {
+//   slide.style.left = `${index * 100}%`;
+// });
+// let counter = 0;
+// nextBtn.addEventListener("click", function () {
+//   counter++;
+//   carousel();
+// });
 
-prevBtn.addEventListener("click", function () {
-  counter--;
-  carousel();
-});
+// prevBtn.addEventListener("click", function () {
+//   counter--;
+//   carousel();
+// });
 
-function carousel() {
-  // working with slides
-  // if (counter === slides.length) {
-  //   counter = 0;
-  // }
-  // if (counter < 0) {
-  //   counter = slides.length - 1;
-  // }
-  // working with buttons
+// function carousel() {
+//   // working with slides
+//   // if (counter === slides.length) {
+//   //   counter = 0;
+//   // }
+//   // if (counter < 0) {
+//   //   counter = slides.length - 1;
+//   // }
+//   // working with buttons
 
-  if (counter < slides.length - 1) {
-    nextBtn.style.display = "block";
-  } else {
-    nextBtn.style.display = "none";
-  }
-  if (counter > 0) {
-    prevBtn.style.display = "block";
-  } else {
-    prevBtn.style.display = "none";
-  }
-  slides.forEach(function (slide) {
-    slide.style.transform = `translateX(-${counter * 100}%)`;
-  });
-}
+//   if (counter < slides.length - 1) {
+//     nextBtn.style.display = "block";
+//   } else {
+//     nextBtn.style.display = "none";
+//   }
+//   if (counter > 0) {
+//     prevBtn.style.display = "block";
+//   } else {
+//     prevBtn.style.display = "none";
+//   }
+//   slides.forEach(function (slide) {
+//     slide.style.transform = `translateX(-${counter * 100}%)`;
+//   });
+// }
 
-prevBtn.style.display = "none";
+// prevBtn.style.display = "none";
