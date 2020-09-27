@@ -826,9 +826,7 @@ Slider
 
 /*== CARD ==*/
   .card-item {
-    background: #FAFAFA;
     padding: 10px;
-    border: 1px solid #e6e6e6;
     font-size: 15px;
   }
 
@@ -880,7 +878,7 @@ Slider
   font-size: 15px;
 }
 .fs13 {
-  font-size: 13px;
+  font-size: 12px;
 }
 .align-right {
   text-align: right;
@@ -892,4 +890,9 @@ Slider
     content: "●";
     margin-right: 5px;
     color: #f1e05a;
+}
+.css::before {
+  content: "●";
+  margin-right: 5px;
+  color: #563d7c;
 }
