@@ -557,6 +557,7 @@ button {
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid #e6e6e6;
+  text-align: center;
 }
 
 
@@ -885,14 +886,22 @@ Slider
 }
 
 /*=== CATEGORIES ===*/
+.cat {
+  position: relative;
+}
 
-.javascript::before {
+.cat.javascript::before {
     content: "●";
-    margin-right: 5px;
+    position: absolute;
+    top: 0;
+    left: -13px;
     color: #f1e05a;
 }
-.css::before {
+.cat.css::before {
   content: "●";
   margin-right: 5px;
+  position: absolute;
+    top: 0;
+    left: -13px;
   color: #563d7c;
 }
