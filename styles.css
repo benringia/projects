@@ -870,6 +870,9 @@ Slider
 .img-responsive {
   width: 100%;
 }
+.img-height200 {
+  max-height: 220px;
+}
 .block {
   display: block;
 }
