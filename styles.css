@@ -165,9 +165,6 @@ main {
   display: grid;
   place-items: center;
 }
-.main {
-  max-width: 798px;
-}
 @media (max-width:768px) {
   .main{
     margin-top: 50px;
@@ -356,6 +353,11 @@ nav {
 @media (min-width: 1200px) {
   .l-container {
     max-width: 1250px;
+  }
+}
+@media (min-width: 2100px) {
+  .l-container {
+    max-width: 1500px;
   }
 }
 /*=============== 
@@ -854,10 +856,15 @@ Slider
 .flex-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 .flex-item4 {
   flex: 0 0 23.6%;
   max-width: 23.6%;
+}
+.flex-item3 {
+  flex: 0 0 32%;
+  max-width: 32%;
 }
 
 .img-responsive {
@@ -874,4 +881,12 @@ Slider
 }
 .align-right {
   text-align: right;
+}
+
+/*=== CATEGORIES ===*/
+
+.javascript::before {
+    content: "●";
+    margin-right: 5px;
+    color: #f1e05a;
 }
