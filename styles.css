@@ -189,6 +189,11 @@ main {
     padding: 45px 10px;
   }
 }
+@media (max-width: 768px) {
+  #about p {
+    font-size: 15px;
+  }
+}
 /*
 =============== 
 Scroll
