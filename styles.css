@@ -870,6 +870,20 @@ Slider
   flex: 0 0 32%;
   max-width: 32%;
 }
+.flex-item4 img{
+  user-select: none;
+  pointer-events: none;
+}
+@media (max-width: 559px) {
+  .flex-item4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  .flex-container {
+    flex-wrap: wrap;
+  }
+}
 
 .img-responsive {
   width: 100%;
