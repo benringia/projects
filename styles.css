@@ -362,7 +362,7 @@ nav {
 }
 @media (min-width: 2100px) {
   .l-container {
-    max-width: 1500px;
+    max-width: 1990px;
   }
 }
 /*=============== 
@@ -835,6 +835,13 @@ Slider
     padding: 10px;
     font-size: 15px;
   }
+  @media(max-width: 559px) {
+    .card-item.ios {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
 
   .card-sub {
     border-bottom: 1px solid #e6e6e6;
@@ -903,6 +910,17 @@ Slider
 .align-right {
   text-align: right;
 }
+@media (max-width: 559px) {
+  .flex-center-sm {
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+  }
+  .maxw-200-sm {
+    max-width: 200px;
+  }
+}
+
 
 /*=== CATEGORIES ===*/
 .cat {
