@@ -915,6 +915,7 @@ Slider
     display: flex;
     justify-content: center;
     margin-right: 20px;
+    max-height: 300px;
   }
   .maxw-200-sm {
     max-width: 200px;
