@@ -215,16 +215,14 @@ nav {
   box-shadow: var(--light-shadow);
   transition: all 0.7s ease;
 } */
-.fixed-nav .links a {
-  color: var(--clr-grey-1);
-}
-.fixed-nav .links a:hover {
-  color: var(--clr-secondary);
+
+.links a {
+
+  transition: all 0.2s ease-in-out;
 }
 @media screen and (min-width: 800px) {
   .links a:hover {
-    transform: scale(1.12) !important;
-    color: var(--clr-secondary);
+    transform: scale(1.05) !important;
   }
 }
 
