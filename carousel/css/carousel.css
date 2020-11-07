@@ -1,0 +1,235 @@
+/*--------------------------------------------------
+  Carousel - Core
+--------------------------------------------------*/
+
+.carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+}
+
+.carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+  /* fix firefox animation glitch */
+}
+
+.carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.carousel .owl-wrapper,
+.carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+.carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+.carousel .owl-item img {
+  display: block;
+  width: 100%;
+}
+
+.carousel .owl-nav.disabled,
+.carousel .owl-dots.disabled {
+  display: none;
+}
+
+.carousel .owl-nav .owl-prev,
+.carousel .owl-nav .owl-next,
+.carousel .owl-dot {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.carousel .owl-nav button.owl-prev,
+.carousel .owl-nav button.owl-next,
+.carousel button.owl-dot {
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+
+.carousel.owl-loaded {
+  display: block;
+}
+
+.carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+
+.carousel.owl-hidden {
+  opacity: 0;
+}
+
+.carousel.owl-refresh .owl-item {
+  visibility: hidden;
+}
+
+.carousel.owl-drag .owl-item {
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.carousel.owl-grab {
+  cursor: move;
+  cursor: grab;
+}
+
+.carousel.owl-rtl {
+  direction: rtl;
+}
+
+.carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+.no-js .carousel {
+  display: block;
+}
+
+/*--------------------------------------------------
+  Carousel - Animate Plugin
+--------------------------------------------------*/
+
+.carousel .animated {
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+}
+
+.carousel .owl-animated-in {
+  z-index: 0;
+}
+
+.carousel .owl-animated-out {
+  z-index: 1;
+}
+
+.carousel .fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*--------------------------------------------------
+  Carousel - Auto Height Plugin
+--------------------------------------------------*/
+
+.owl-height {
+  transition: height 500ms ease-in-out;
+}
+
+/*--------------------------------------------------
+  Carousel - Lazy Load Plugin
+--------------------------------------------------*/
+
+.carousel .owl-item .owl-lazy {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.carousel .owl-item .owl-lazy[src^=""], .carousel .owl-item .owl-lazy:not([src]) {
+  max-height: 0;
+}
+
+.carousel .owl-item img.owl-lazy {
+  transform-style: preserve-3d;
+}
+
+/*--------------------------------------------------
+  Carousel - Video Plugin
+--------------------------------------------------*/
+
+.carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+
+.carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: transform 100ms ease;
+}
+
+.carousel .owl-video-play-icon:hover {
+  transform: scale(1.3, 1.3);
+}
+
+.carousel .owl-video-playing .owl-video-tn,
+.carousel .owl-video-playing .owl-video-play-icon {
+  display: none;
+}
+
+.carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 400ms ease;
+}
+
+.carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
