@@ -872,10 +872,10 @@ Slider
   justify-content: space-between;
   margin-bottom: 30px;
 }
-.flex-item4 {
+/* .flex-item4 {
   flex: 0 0 23.6%;
   max-width: 23.6%;
-}
+} */
 .flex-item3 {
   flex: 0 0 32%;
   max-width: 32%;

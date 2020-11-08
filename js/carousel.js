@@ -16,13 +16,13 @@ $(document).ready(function() {
                 items: 2
             },
             768: {
-                items: 4
+                items: 3
             },
             1250: {
-                items: 5
+                items: 4
             },
             2000: {
-                items: 6
+                items: 5
             }
         }
     })
