@@ -886,8 +886,8 @@ Slider
 }
 @media (max-width: 559px) {
   .flex-item4 {
-    flex: 0 0 100%;
-    max-width: 100%;
+    /* flex: 0 0 100%;
+    max-width: 100%; */
     margin-bottom: 40px;
   }
   .flex-container {

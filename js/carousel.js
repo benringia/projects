@@ -7,10 +7,11 @@ $(document).ready(function() {
         autoplayHoverPause: true,
         nav: true,
         arrows: true,
-        margin: 20,
+        margin: 10,
         responsive: {
             0: {
-                items:1
+                items:1,
+                autoplay: true
             },
             576: {
                 items: 2
