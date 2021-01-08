@@ -934,19 +934,19 @@ Slider
   position: relative;
 }
 
-.cat.javascript::before {
+.cat.javascript::before,
+.cat.php:before,
+.cat.css:before {
     content: "●";
     position: absolute;
     top: 0;
     left: -13px;
     color: #f1e05a;
 }
+.cat.php:before {
+  color: #4F5D95;
+}
 .cat.css::before {
-  content: "●";
-  margin-right: 5px;
-  position: absolute;
-    top: 0;
-    left: -13px;
   color: #563d7c;
 }
 .underscore {
