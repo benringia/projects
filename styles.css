@@ -178,11 +178,15 @@ main {
   .section {
     padding: 15px 30px;
   }
+  #about {
+    padding-top: 45px;
+  }
 }
 @media (max-width: 552px) {
   .section {
     padding: 15px 20px;
   }
+  
 }
 @media (max-width: 400px) {
   .section {
@@ -847,6 +851,14 @@ Slider
     margin-bottom: 10px;
     text-align: center;
     font-size: 13px;
+  }
+  @media(min-width: 768px) {
+    .card-sub {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 55px;
+    }
   }
   .code-anchor {
     color: #333333;
