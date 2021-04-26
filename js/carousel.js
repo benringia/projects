@@ -10,8 +10,7 @@ $(document).ready(function() {
         margin: 10,
         responsive: {
             0: {
-                items:1,
-                autoplay: true
+                items:1
             },
             576: {
                 items: 2
