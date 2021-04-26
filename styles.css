@@ -884,6 +884,11 @@ Slider
   justify-content: space-between;
   margin-bottom: 30px;
 }
+@media (max-width: 768px) {
+  .flex-container {
+    margin-bottom: 0px;
+  }
+}
 /* .flex-item4 {
   flex: 0 0 23.6%;
   max-width: 23.6%;
@@ -900,7 +905,6 @@ Slider
   .flex-item4 {
     /* flex: 0 0 100%;
     max-width: 100%; */
-    margin-bottom: 40px;
   }
   .flex-container {
     flex-wrap: wrap;
