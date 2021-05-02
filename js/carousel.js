@@ -3,17 +3,16 @@ $(document).ready(function() {
         loop:true,
         dots:false,
         autoplay: false,
-        autoplayTimeout: 2500,
-        autoplayHoverPause: true,
         nav: true,
         arrows: true,
         margin: 10,
         responsive: {
             0: {
-                items:1
+                items:1,
+                nav: true,
             },
             576: {
-                items: 2
+                items: 2,
             },
             768: {
                 items: 3

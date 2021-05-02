@@ -13,11 +13,7 @@
   -webkit-tap-highlight-color: transparent;
   transform: translateY(-50%);
 }
-@media (max-width: 500px) {
-  .owl-nav {
-    display: none;
-  }
-}
+
 
 .owl-nav [class*='owl-'] {
   position: absolute;
@@ -46,7 +42,10 @@
 
 .owl-nav .owl-prev { left: -30px; border-radius: 0px 7px 7px 0px; }
 .owl-nav .owl-next { right: -30px; border-radius: 7px 0 0 7px;}
- 
+ @media (max-width: 552px) {
+  .owl-nav .owl-prev { left: -15px; }
+  .owl-nav .owl-next { right: -15px; }
+ }
 .carousel.alt .owl-nav .owl-prev { left: 10px; border-radius: 0px 7px 7px 0px; }
 .carousel.alt .owl-nav .owl-next { right: 10px; border-radius: 7px 0 0 7px; }
 
