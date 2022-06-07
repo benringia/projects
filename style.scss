@@ -1207,7 +1207,7 @@ Slider
 .cat {
   position: relative;
 
-  &.javascript::before, &.php:before, &.css:before {
+  &.javascript::before, &.php:before, &.css:before,&.sass::before {
     content: "●";
     position: absolute;
     top: 0;
@@ -1221,6 +1221,10 @@ Slider
 
   &.css::before {
     color: #563d7c;
+  }
+
+  &.sass::before {
+    color: #c6538c;
   }
 }
 
