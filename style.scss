@@ -1207,7 +1207,7 @@ Slider
 .cat {
   position: relative;
 
-  &.javascript::before, &.php:before, &.css:before,&.sass::before,&.tailwind::before {
+  &.javascript::before, &.php:before, &.css:before,&.sass::before,&.tailwind::before,&.liquid::before {
     content: "●";
     position: absolute;
     top: 0;
@@ -1228,6 +1228,10 @@ Slider
   }
 
   &.tailwind::before {
+    color: skyblue;
+  }
+
+  &.liquid::before {
     color: skyblue;
   }
 }
