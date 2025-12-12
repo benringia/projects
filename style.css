@@ -1102,7 +1102,11 @@ Slider
 
 .img-responsive {
   width: 100%;
+}
+
+.game-image {
   max-height: 147.6px;
+  border-radius: 8px;
 }
 
 .img-height200 {
