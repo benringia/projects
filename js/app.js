@@ -1,185 +1,60 @@
-
-
-// ********** set date ************
-// select span
-// const date = document.getElementById("date");
-// date.innerHTML = new Date().getFullYear();
-
-// ********** close links ************
-const navToggle = document.querySelector(".nav-toggle");
-const linksContainer = document.querySelector(".header");
-const links = document.querySelector(".links");
-
-navToggle.addEventListener("click", function () {
-  linksContainer.classList.toggle("active")
-  // console.log(linksContainer.getBoundingClientRect());
-});
-
-// ********** fixed navbar ************
-
-// const navbar = document.getElementById("nav");
-// const topLink = document.querySelector(".top-link");
-// const logo = document.querySelector(".logo")
-
-// window.addEventListener("scroll", function () {
-//   const scrollHeight = window.pageYOffset;
-//   const navHeight = navbar.getBoundingClientRect().height;
-//   if (scrollHeight > navHeight) {
-//     navbar.classList.add("fixed-nav");
-//     logo.src="./images/logo.png"
-//   } else {
-//     navbar.classList.remove("fixed-nav");
-//     logo.src="./images/white-logo.png"
-//   }
-//   // setup back to top link
-
-//   if (scrollHeight > 500) {
-//     topLink.classList.add("show-link");
-//   } else {
-//     topLink.classList.remove("show-link");
-//   }
-// });
-
-// ********** smooth scroll ************
-// select links
-const scrollLinks = document.querySelectorAll(".scroll-link");
-scrollLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    // prevent default
-    e.preventDefault();
-    // navigate to specific spot
-    const id = e.currentTarget.getAttribute("href").slice(1);
-    const element = document.getElementById(id);
-
-    const navHeight = navbar.getBoundingClientRect().height;
-    const containerHeight = linksContainer.getBoundingClientRect().height;
-    const fixedNav = navbar.classList.contains("fixed-nav");
-    let position = element.offsetTop - navHeight;
-
-    if (!fixedNav) {
-      position = position - navHeight;
-    }
-    if (navHeight > 82) {
-      position = position + containerHeight;
-    }
-
-    window.scrollTo({
-      left: 0,
-      top: position,
-    });
-    // close
-    linksContainer.style.height = 0;
-  });
-});
-// calculate heights
-
-
-// pre-loader / video
-// const btn = document.querySelector(".switch-btn");
-// const video = document.querySelector(".video-container");
-
-// btn.addEventListener("click", function () {
-//   if (!btn.classList.contains("slide1")) {
-//     btn.classList.add("slide1");
-//     video.pause();
-//   } else {
-//     btn.classList.remove("slide1");
-//     video.play();
-//   }
-// });
-
-// preloader
+// Preloader
 const preloader = document.querySelector(".preloader");
-
 window.addEventListener("load", function () {
   preloader.classList.add("hide-preloader");
 });
 
+// Mobile nav toggle
+const navToggle = document.querySelector(".nav-toggle");
+const mobileMenu = document.getElementById("mobileMenu");
 
-//MODAL
+navToggle.addEventListener("click", function () {
+  mobileMenu.classList.toggle("active");
+});
 
-// const modalBtn = document.querySelector(".modal-btn");
-// const modal = document.querySelector(".modal-overlay");
-// const closeBtn = document.querySelector(".close-btn");
+// Close mobile menu when a link is clicked
+document.querySelectorAll(".mobile-links a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    mobileMenu.classList.remove("active");
+  });
+});
 
-// modalBtn.addEventListener("click", function () {
-//   modal.classList.add("open-modal");
-// });
-// closeBtn.addEventListener("click", function () {
-//   modal.classList.remove("open-modal");
-// });
+// Show/hide scroll-to-top button
+const topLink = document.querySelector(".top-link");
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > 400) {
+    topLink.classList.add("show-link");
+  } else {
+    topLink.classList.remove("show-link");
+  }
+});
 
-//TABS
-// const about = document.querySelector(".about");
-// const btns = document.querySelectorAll(".tab-btn");
-// const articles = document.querySelectorAll(".content");
-// about.addEventListener("click", function (e) {
-//   const id = e.target.dataset.id;
-//   if (id) {
-//     // remove selected from other buttons
-//     btns.forEach(function (btn) {
-//       btn.classList.remove("active");
-//     });
-//     e.target.classList.add("active");
-//     // hide other articles
-//     articles.forEach(function (article) {
-//       article.classList.remove("active");
-//     });
-//     const element = document.getElementById(id);
-//     element.classList.add("active");
-//   }
-// });
+// Load more: show cards per section based on screen size, reveal rest on click
+(function initLoadMore() {
+  function getMax() {
+    return window.innerWidth <= 540 ? 3 : 5;
+  }
 
-//show more 
-// const more = document.querySelector('.more-btn');
-// const moreActive = document.querySelector('.more');
-// more.addEventListener('click', function() {
-//   moreActive.classList.toggle("active")
-// })
+  document.querySelectorAll(".flex-container").forEach(function (grid) {
+    const cards = Array.from(grid.querySelectorAll(".card-item"));
+    const MAX = getMax();
+    if (cards.length <= MAX) return;
 
+    cards.slice(MAX).forEach(function (card) {
+      card.classList.add("card-hidden");
+    });
 
+    const remaining = cards.length - MAX;
+    const btn = document.createElement("button");
+    btn.className = "load-more-btn";
+    btn.innerHTML = "Load More <span class='load-more-count'>+" + remaining + "</span>";
+    grid.insertAdjacentElement("afterend", btn);
 
-//slider 
-// const slides = document.querySelectorAll(".slide");
-// const nextBtn = document.querySelector(".nextBtn");
-// const prevBtn = document.querySelector(".prevBtn");
-// slides.forEach(function (slide, index) {
-//   slide.style.left = `${index * 100}%`;
-// });
-// let counter = 0;
-// nextBtn.addEventListener("click", function () {
-//   counter++;
-//   carousel();
-// });
-
-// prevBtn.addEventListener("click", function () {
-//   counter--;
-//   carousel();
-// });
-
-// function carousel() {
-//   // working with slides
-//   // if (counter === slides.length) {
-//   //   counter = 0;
-//   // }
-//   // if (counter < 0) {
-//   //   counter = slides.length - 1;
-//   // }
-//   // working with buttons
-
-//   if (counter < slides.length - 1) {
-//     nextBtn.style.display = "block";
-//   } else {
-//     nextBtn.style.display = "none";
-//   }
-//   if (counter > 0) {
-//     prevBtn.style.display = "block";
-//   } else {
-//     prevBtn.style.display = "none";
-//   }
-//   slides.forEach(function (slide) {
-//     slide.style.transform = `translateX(-${counter * 100}%)`;
-//   });
-// }
-
-// prevBtn.style.display = "none";
+    btn.addEventListener("click", function () {
+      grid.querySelectorAll(".card-item.card-hidden").forEach(function (card) {
+        card.classList.remove("card-hidden");
+      });
+      btn.remove();
+    });
+  });
+})();
