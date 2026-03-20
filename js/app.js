@@ -152,32 +152,111 @@ window.addEventListener("scroll", function () {
   setTimeout(typeNext, 900);
 })();
 
-// Load more: show cards per section based on screen size, reveal rest on click
-(function initLoadMore() {
-  function getMax() {
-    return window.innerWidth <= 540 ? 3 : 5;
+// Apply load-more behaviour to a single section
+function applyLoadMore(section) {
+  const grid = section.querySelector(".flex-container");
+  if (!grid) return;
+
+  // Remove any existing load-more button
+  const nextEl = grid.nextElementSibling;
+  if (nextEl && nextEl.classList.contains("load-more-btn")) nextEl.remove();
+
+  // Reset all cards to visible / clean state
+  const cards = Array.from(grid.querySelectorAll(".card-item"));
+  cards.forEach(function (card) {
+    card.classList.remove("card-hidden", "card-reveal");
+    card.style.animationDelay = "";
+  });
+
+  const MAX = window.innerWidth <= 540 ? 3 : 5;
+  if (cards.length <= MAX) return;
+
+  cards.slice(MAX).forEach(function (card) {
+    card.classList.add("card-hidden");
+  });
+
+  const remaining = cards.length - MAX;
+  const btn = document.createElement("button");
+  btn.className = "load-more-btn";
+  btn.textContent = "Show " + remaining + " More";
+  grid.insertAdjacentElement("afterend", btn);
+
+  btn.addEventListener("click", function () {
+    const hidden = Array.from(grid.querySelectorAll(".card-item.card-hidden"));
+    hidden.forEach(function (card, i) {
+      card.classList.remove("card-hidden");
+      card.style.animationDelay = (i * 0.06) + "s";
+      card.classList.add("card-reveal");
+    });
+    btn.remove();
+  });
+}
+
+// Initialise load-more for all sections up front
+function initLoadMore() {
+  document.querySelectorAll(".section").forEach(function (section) {
+    applyLoadMore(section);
+  });
+}
+
+// Tab switching
+function initTabs() {
+  const tabs = document.querySelectorAll(".tab-btn");
+  const sections = document.querySelectorAll(".section");
+  const sectionTitle = document.getElementById("dynamic-section-title");
+
+  // Activate the Recents tab by default
+  const defaultSection = document.getElementById("recents");
+  if (defaultSection) defaultSection.classList.add("tab-active");
+
+  function updateTitle(targetId) {
+    if (!sectionTitle) return;
+    const label = targetId === "recents"
+      ? "Selected Works"
+      : document.querySelector('.tab-btn[data-target="' + targetId + '"]').textContent.trim();
+    sectionTitle.style.opacity = "0";
+    setTimeout(function () {
+      sectionTitle.textContent = label;
+      sectionTitle.style.opacity = "1";
+    }, 150);
   }
 
-  document.querySelectorAll(".flex-container").forEach(function (grid) {
-    const cards = Array.from(grid.querySelectorAll(".card-item"));
-    const MAX = getMax();
-    if (cards.length <= MAX) return;
-
-    cards.slice(MAX).forEach(function (card) {
-      card.classList.add("card-hidden");
+  function switchTab(targetId) {
+    tabs.forEach(function (t) {
+      const active = t.dataset.target === targetId;
+      t.classList.toggle("tab-btn--active", active);
+      t.setAttribute("aria-selected", active ? "true" : "false");
     });
 
-    const remaining = cards.length - MAX;
-    const btn = document.createElement("button");
-    btn.className = "load-more-btn";
-    btn.innerHTML = "Load More <span class='load-more-count'>+" + remaining + "</span>";
-    grid.insertAdjacentElement("afterend", btn);
+    sections.forEach(function (s) { s.classList.remove("tab-active"); });
 
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    target.classList.add("tab-active");
+    applyLoadMore(target);
+    updateTitle(targetId);
+  }
+
+  tabs.forEach(function (btn) {
     btn.addEventListener("click", function () {
-      grid.querySelectorAll(".card-item.card-hidden").forEach(function (card) {
-        card.classList.remove("card-hidden");
-      });
-      btn.remove();
+      switchTab(btn.dataset.target);
     });
   });
-})();
+
+  // Intercept navbar / mobile-menu anchor links that point to a section
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    const targetId = link.getAttribute("href").slice(1);
+    if (!document.querySelector('.tab-btn[data-target="' + targetId + '"]')) return;
+
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      switchTab(targetId);
+      const tabsEl = document.querySelector(".tabs-container");
+      if (tabsEl) tabsEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  });
+}
+
+initLoadMore();
+initTabs();

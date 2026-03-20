@@ -24,12 +24,10 @@
         <li><a href="#about">About</a></li>
         <li><a href="#recents">Recent</a></li>
         <li><a href="#godotgames">Game Dev</a></li>
-        <li><a href="#claudecode">Claude Code</a></li>
-        <li><a href="#fswebsites">Fullstack</a></li>
+        <li><a href="#claudecode">Claude Code / AI</a></li>
+        <li><a href="#fswebsites">Dynamic/CMS</a></li>
         <li><a href="#websites">Static</a></li>
-        <li><a href="#games">Mini Games</a></li>
         <li><a href="#jsapps">JS Apps</a></li>
-        <li><a href="#phpapps">PHP</a></li>
         <li class="disabled"><a href="#contact">Contact</a></li>
         <li class="disabled"><a href="#" onclick="return false;">Resume</a></li>
       </ul>
@@ -47,12 +45,10 @@
         <li><a href="#about">About</a></li>
         <li><a href="#recents">Recent Projects</a></li>
         <li><a href="#godotgames">Game Dev</a></li>
-        <li><a href="#claudecode">Claude Code</a></li>
-        <li><a href="#fswebsites">Fullstack Websites</a></li>
+        <li><a href="#claudecode">Claude Code / AI</a></li>
+        <li><a href="#fswebsites">Dynamic/CMS Websites</a></li>
         <li><a href="#websites">Static Websites</a></li>
-        <li><a href="#games">Mini Games</a></li>
         <li><a href="#jsapps">JavaScript Apps</a></li>
-        <li><a href="#phpapps">PHP Projects</a></li>
         <li class="disabled"><a href="#contact">Contact</a></li>
         <li class="disabled"><a href="#" onclick="return false;">Resume</a></li>
       </ul>
@@ -84,6 +80,8 @@
               <span class="tag">Siteglide</span>
               <span class="tag">Wix</span>
               <span class="tag">Claude Code</span>
+              <span class="tag">Lovable</span>
+               <span class="tag">Gemini</span>
             </div>
           </div>
           <div class="hero-graphic" aria-hidden="true">
@@ -104,120 +102,212 @@
     <!-- Main Content -->
     <div class="content">
 
+      <!-- Section Intro -->
+      <div class="section-intro">
+        <span class="section-intro__label">Portfolio Index</span>
+        <h2 class="title02" id="dynamic-section-title">Selected Works</h2>
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="tabs-container" role="tablist" aria-label="Project categories">
+        <div class="tabs-bar">
+          <button class="tab-btn tab-btn--active" role="tab" aria-selected="true" aria-controls="recents" data-target="recents">Recents</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="godotgames" data-target="godotgames">Godot</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="claudecode" data-target="claudecode">Claude Code / AI</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="fswebsites" data-target="fswebsites">CMS Websites</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="websites" data-target="websites">Static Websites</button>
+          
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="jsapps" data-target="jsapps">Vanilla Javascript</button>
+        </div>
+      </div>
+
       <!-- Recent Projects -->
-      <section class="section" id="recents">
-        <h2 class="title02">Recent Projects<span class="underscore">_</span></h2>
-        <div class="margin-btm20"><small>// latest_projects</small></div>
+      <section class="section" id="recents" role="tabpanel">
         <div class="flex-container">
 
           <div class="flex-item4 card-item">
             <a href="https://virtual-pet-fitness.vercel.app/" target="_blank" class="card-thumb--logo"><img class="img-responsive" src="./images/virtual-pet-fitness.svg" alt="Virtual Pet Fitness"></a>
-            <h4 class="title04">Virtual Pet Fitness<br><small class="fs13 cat javascript">Claude Code / Web App</small></h4>
+            <h4 class="title04">Virtual Pet Fitness - Petfit</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Claude Code</span>
+              <span class="tech-pill">Vue 3</span>
+              <span class="tech-pill">Vite</span>
+              <span class="tech-pill">Supabase</span>
+              <span class="tech-pill">Tailwind</span>
+            </div>
             <p class="fs15 card-sub">A virtual pet app that gamifies fitness — keep your pet healthy by completing real-world workouts and wellness activities.</p>
             <p class="fs13 align-right">View <a href="https://virtual-pet-fitness.vercel.app/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
-            <a href="https://ben-development-store-2-2.myshopify.com/" target="_blank"><img class="img-responsive" src="./images/Shopify.webp" alt="Ben Dev Store"></a>
-            <h4 class="title04">Ben Dev Store<br><small class="fs13 cat javascript">Shopify / Liquid / Tailwind</small></h4>
-            <p class="fs15 card-sub">A Shopify Store Theme built from scratch — PASSWORD: oskirt</p>
-            <p class="fs13 align-right">View <a href="https://github.com/benringia/ben-store-shopify-v2" target="_blank" class="code-anchor"><code>Code</code></a></p>
+            <a href="https://virtual-pet-fitness.vercel.app/" target="_blank" class="card-thumb--logo"><img class="img-responsive" src="./images/bc-lgg.png" alt="Virtual Pet Fitness"></a>
+            <h4 class="title04">Ben Clauser - Portfolio</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Lovable</span>
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Vite</span>
+              <span class="tech-pill">Tailwind</span>
+            </div>
+            <p class="fs15 card-sub">A simple Portfolio website made with Lovable(Free)</p>
+            <p class="fs13 align-right">View <a href="https://virtual-pet-fitness.vercel.app/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
+
+          
 
           <div class="flex-item4 card-item">
             <a href="https://bezzawear.com/" target="_blank"><img class="img-responsive" src="./images/Bezza.webp" alt="Bezza Wear"></a>
-            <h4 class="title04">Bezza Wear<br><small class="fs13 cat sass">WIX</small></h4>
+            <h4 class="title04">Bezza Wear</h4>
+            <div class="card-meta">
+              <span class="tech-pill">WIX</span>
+            </div>
             <p class="fs15 card-sub">A Wix E-Commerce Store</p>
             <p class="fs13 align-right">View <a href="https://bezzawear.com/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://www.testemp.co.uk/" target="_blank"><img class="img-responsive" src="./images/Testemp.png" alt="Testemp"></a>
-            <h4 class="title04">Testemp<br><small class="fs13 cat liquid">Liquid / Tailwind</small></h4>
+            <h4 class="title04">Testemp</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Siteglide</span>
+              <span class="tech-pill">Liquid</span>
+              <span class="tech-pill">Tailwind</span>
+              <span class="tech-pill">Javascript</span>
+            </div>
             <p class="fs15 card-sub">With fully automated Login/Register system and E-commerce</p>
             <p class="fs13 align-right">View <a href="https://www.testemp.co.uk/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://www.barlowblinds.com/" target="_blank"><img class="img-responsive" src="./images/Barlow.webp" alt="Barlow Blinds"></a>
-            <h4 class="title04">Barlow Blinds<br><small class="fs13 cat liquid">Liquid / Tailwind</small></h4>
+            <h4 class="title04">Barlow Blinds</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Siteglide</span>
+              <span class="tech-pill">Liquid</span>
+              <span class="tech-pill">Tailwind</span>
+              <span class="tech-pill">Javascript</span>
+            </div>
             <p class="fs15 card-sub">With fully automated Login/Register system and Quotation Engine</p>
             <p class="fs13 align-right">View <a href="https://www.barlowblinds.com/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://byrom-new-site.uk-siteglide.com/" target="_blank"><img class="img-responsive" src="./images/Byrom.webp" alt="Byrom Audiology"></a>
-            <h4 class="title04">Byrom Audiology<br><small class="fs13 cat liquid">Liquid / Tailwind</small></h4>
+            <h4 class="title04">Byrom Audiology</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Siteglide</span>
+              <span class="tech-pill">Liquid</span>
+              <span class="tech-pill">Tailwind</span>
+              <span class="tech-pill">Javascript</span>
+            </div>
             <p class="fs15 card-sub">With fully email automated Forms and E-Commerce</p>
             <p class="fs13 align-right">View <a href="https://byrom-new-site.uk-siteglide.com/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://www.studyfromhome.co.uk/" target="_blank"><img class="img-responsive" src="./images/SFH.webp" alt="Study From Home"></a>
-            <h4 class="title04">Study From Home<br><small class="fs13 cat liquid">Liquid / Tailwind</small></h4>
+            <h4 class="title04">Study From Home</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Siteglide</span>
+              <span class="tech-pill">Liquid</span>
+              <span class="tech-pill">Tailwind</span>
+              <span class="tech-pill">Javascript</span>
+            </div>
             <p class="fs15 card-sub">With fully email automated Forms and E-Commerce</p>
             <p class="fs13 align-right">View <a href="https://www.studyfromhome.co.uk/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://www.transportldp.co.uk/" target="_blank"><img class="img-responsive" src="./images/LDP.webp" alt="LDP Transport"></a>
-            <h4 class="title04">LDP Transport<br><small class="fs13 cat liquid">Liquid / Tailwind</small></h4>
+            <h4 class="title04">LDP Transport</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Siteglide</span>
+              <span class="tech-pill">Liquid</span>
+              <span class="tech-pill">Tailwind</span>
+              <span class="tech-pill">Javascript</span>
+            </div>
             <p class="fs15 card-sub">With fully email automated Forms and Login/Register</p>
             <p class="fs13 align-right">View <a href="https://www.transportldp.co.uk/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://www.hortonssteamfair.co.uk/" target="_blank"><img class="img-responsive" src="./images/Hortons.webp" alt="Hortons"></a>
-            <h4 class="title04">Hortons<br><small class="fs13 cat liquid">Liquid / Tailwind</small></h4>
+            <h4 class="title04">Hortons</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Siteglide</span>
+              <span class="tech-pill">Liquid</span>
+              <span class="tech-pill">Tailwind</span>
+              <span class="tech-pill">Javascript</span>
+            </div>
             <p class="fs15 card-sub">With fully email automated Forms</p>
             <p class="fs13 align-right">View <a href="https://www.hortonssteamfair.co.uk/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/devtest/" target="_blank"><img class="img-responsive" src="./images/get-an.png" alt="Intervention"></a>
-            <h4 class="title04">Intervention<br><small class="fs13 cat sass">SCSS</small></h4>
+            <h4 class="title04">Intervention</h4>
+            <div class="card-meta">
+              <span class="tech-pill">SCSS</span>
+            </div>
             <p class="fs14 card-sub">Simple modern front page UI</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/devtest" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/tw-a/" target="_blank"><img class="img-responsive" src="./images/manage-min.png" alt="Manage"></a>
-            <h4 class="title04">Manage<br><small class="fs13 cat tailwind">Tailwind</small></h4>
+            <h4 class="title04">Manage</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Tailwind</span>
+            </div>
             <p class="fs14 card-sub">Example page written in Tailwind</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/tw-a" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/speechtextreader/" rel="noopener noreferrer" target="_blank"><img class="img-responsive" src="./images/SpeechReader-Desktop.png" alt="Speech Reader"></a>
-            <h4 class="title04">Speech Reader<br><small class="fs13 cat javascript">Javascript</small></h4>
+            <h4 class="title04">Speech Reader</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
             <p class="fs15 card-sub">Simple voice speech reader</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/speechtextreader" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/matter-maze/" target="_blank"><img class="img-responsive" src="./images/maze_thumb.png" alt="Maze"></a>
-            <h4 class="title04">Maze<br><small class="fs13 cat javascript">Javascript</small></h4>
+            <h4 class="title04">Maze</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
             <p class="fs15 card-sub">A simple MatterJS maze game.</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/matter-maze" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://tokyomice.org/" target="_blank"><img class="img-responsive" src="./images/tokyo-mice.png" alt="Tokyo Mice"></a>
-            <h4 class="title04">Tokyo Mice<br><small class="fs13 cat javascript">Javascript</small></h4>
+            <h4 class="title04">Tokyo Mice</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
             <p class="fs14 card-sub">A Japanese industrial style website</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/tokyo-mice" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://github.com/benringia/blogsmith" target="_blank"><img class="img-responsive" src="./images/blogsmith.png" alt="Blogsmith"></a>
-            <h4 class="title04">Blogsmith<br><small class="fs13 cat php">PHP</small></h4>
+            <h4 class="title04">Blogsmith</h4>
+            <div class="card-meta">
+              <span class="tech-pill">PHP</span>
+            </div>
             <p class="fs14 card-sub">A CMS App — WordPress Admin mini clone (In Development)</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/blogsmith" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://shkt-nonai.jp/" target="_blank"><img class="img-responsive" src="./images/shkt-nonai.png" alt="Nonai"></a>
-            <h4 class="title04">Nonai<br><small class="fs13 cat php">PHP</small></h4>
+            <h4 class="title04">Nonai</h4>
+            <div class="card-meta">
+              <span class="tech-pill">PHP</span>
+            </div>
             <p class="fs14 card-sub">A Japanese website made with WP custom theme / PHP</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/shkt-nonai" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
@@ -226,9 +316,7 @@
       </section>
 
        <!-- Claude Code Projects -->
-      <section class="section" id="claudecode">
-        <h2 class="title02">Claude Code<span class="underscore">_</span></h2>
-        <div class="margin-btm20"><small>// ai_assisted · claude · full-stack</small></div>
+      <section class="section" id="claudecode" role="tabpanel">
         <div class="flex-container">
 
           <div class="flex-item4 card-item card--claudecode">
@@ -237,13 +325,13 @@
               <span class="cc-card__label">// claude code</span>
             </div>
             <div class="cc-card__body">
-              <h4 class="cc-card__title">Virtual Pet Fitness</h4>
+              <h4 class="cc-card__title">Petfit - Virtual Pet Fitness</h4>
               <p class="cc-card__desc">A gamified fitness tracker where you log workouts, calories, and diet habits to evolve a virtual pet through five stages.</p>
               <div class="cc-card__stack">
-                <span class="tag">Vue 3</span>
-                <span class="tag">Vite</span>
-                <span class="tag">Tailwind CSS</span>
-                <span class="tag">localStorage</span>
+                <span class="tech-pill">Vue 3</span>
+                <span class="tech-pill">Vite</span>
+                <span class="tech-pill">Tailwind CSS</span>
+                <span class="tech-pill">Supabase</span>
               </div>
             </div>
             <div class="cc-card__footer">
@@ -252,6 +340,26 @@
           </div>
 
           <div class="flex-item4 card-item card--claudecode">
+            <div class="cc-card__thumb"><img src="./images/bc-lgg.png" alt="lovable" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="cc-card__top">
+              <span class="cc-card__label">// Lovable</span>
+            </div>
+            <div class="cc-card__body">
+              <h4 class="cc-card__title">Ben Ringia</h4>
+              <p class="cc-card__desc">A simple Portfolio website made with Lovable(Free)</p>
+              <div class="cc-card__stack">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">Typescript</span>
+                <span class="tech-pill">Tailwind CSS</span>
+                <span class="tech-pill">Vite</span>
+              </div>
+            </div>
+            <div class="cc-card__footer">
+              <a href="https://benclauser.lovable.app/" target="_blank" class="code-anchor"><code>Live</code></a>
+            </div>
+          </div>
+
+          <div class="flex-item4 card-item card--claudecode">
             <div class="cc-card__top">
               <span class="cc-card__label">// coming soon</span>
             </div>
@@ -259,7 +367,7 @@
               <h4 class="cc-card__title">Coming Soon</h4>
               <p class="cc-card__desc">Next Claude Code project — in progress.</p>
               <div class="cc-card__stack">
-                <span class="tag">Claude Code</span>
+                <span class="tech-pill">Claude Code</span>
               </div>
             </div>
             <div class="cc-card__footer">
@@ -275,7 +383,7 @@
               <h4 class="cc-card__title">Coming Soon</h4>
               <p class="cc-card__desc">Next Claude Code project — in progress.</p>
               <div class="cc-card__stack">
-                <span class="tag">Claude Code</span>
+                <span class="tech-pill">Claude Code</span>
               </div>
             </div>
             <div class="cc-card__footer">
@@ -291,23 +399,7 @@
               <h4 class="cc-card__title">Coming Soon</h4>
               <p class="cc-card__desc">Next Claude Code project — in progress.</p>
               <div class="cc-card__stack">
-                <span class="tag">Claude Code</span>
-              </div>
-            </div>
-            <div class="cc-card__footer">
-              <a href="#" class="code-anchor"><code>TBD</code></a>
-            </div>
-          </div>
-
-          <div class="flex-item4 card-item card--claudecode">
-            <div class="cc-card__top">
-              <span class="cc-card__label">// coming soon</span>
-            </div>
-            <div class="cc-card__body">
-              <h4 class="cc-card__title">Coming Soon</h4>
-              <p class="cc-card__desc">Next Claude Code project — in progress.</p>
-              <div class="cc-card__stack">
-                <span class="tag">Claude Code</span>
+                <span class="tech-pill">Claude Code</span>
               </div>
             </div>
             <div class="cc-card__footer">
@@ -319,21 +411,27 @@
       </section>
 
       <!-- Game Development (Godot) -->
-      <section class="section" id="godotgames">
-        <h2 class="title02">Game Development<span class="underscore">_</span></h2>
-        <div class="margin-btm20"><small>// godot_engine · gdscript · c#</small></div>
+      <section class="section" id="godotgames" role="tabpanel">
         <div class="flex-container">
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/FlappyPlane/" target="_blank"><img class="img-responsive game-image" src="./images/dc-img-2.webp" alt="Flappy Plane"></a>
-            <h4 class="title04">Flappy Plane<br><small class="fs13 cat liquid">GodotEngine / GDScript</small></h4>
+            <h4 class="title04">Flappy Plane</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Godot Engine</span>
+              <span class="tech-pill">GDScript</span>
+            </div>
             <p class="fs15 card-sub">A flappy bird clone made using Godot Engine / GDScript</p>
             <p class="fs13 align-right">View / Download <a href="https://github.com/benringia/FlappyPlane" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/DiceCatcherGD1/" target="_blank"><img class="img-responsive game-image" src="./images/dc-img-1.webp" alt="Fox Dice Catcher"></a>
-            <h4 class="title04">Fox Dice Catcher<br><small class="fs13 cat liquid">GodotEngine / GDScript</small></h4>
+            <h4 class="title04">Fox Dice Catcher</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Godot Engine</span>
+              <span class="tech-pill">GDScript</span>
+            </div>
             <p class="fs15 card-sub">A simple catching game made with Godot Engine / GDScript</p>
             <p class="fs13 align-right">View / Download <a href="https://github.com/benringia/DiceCatcherGD1" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
@@ -344,42 +442,83 @@
      
 
       <!-- Fullstack Websites -->
-      <section class="section" id="fswebsites">
-        <h2 class="title02">Fullstack Websites<span class="underscore">_</span></h2>
-        <div class="margin-btm20"><small>// liquid · javascript · siteglide · tailwind</small></div>
+      <section class="section" id="fswebsites" role="tabpanel">
         <div class="flex-container">
 
           <div class="flex-item4 card-item">
+            <a href="https://ben-development-store-2-2.myshopify.com/" target="_blank"><img class="img-responsive" src="./images/Shopify.webp" alt="Ben Dev Store"></a>
+            <h4 class="title04">Ben Dev Store</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Shopify</span>
+              <span class="tech-pill">Liquid</span>
+              <span class="tech-pill">Tailwind</span>
+              <span class="tech-pill">Alpine</span>
+            </div>
+            <p class="fs15 card-sub">A Shopify Store Theme built from scratch — PASSWORD: oskirt</p>
+            <p class="fs13 align-right">View <a href="https://github.com/benringia/ben-store-shopify-v2" target="_blank" class="code-anchor"><code>Code</code></a></p>
+          </div>
+
+          <div class="flex-item4 card-item">
             <a href="https://barlow-blinds-new-website.uk-siteglide.com/" target="_blank"><img class="img-responsive" src="./images/Barlow.webp" alt="Barlow Blinds"></a>
-            <h4 class="title04">Barlow Blinds<br><small class="fs13 cat liquid">Liquid / Tailwind</small></h4>
+            <h4 class="title04">Barlow Blinds</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Siteglide</span>
+              <span class="tech-pill">Liquid</span>
+              <span class="tech-pill">Tailwind</span>
+              <span class="tech-pill">Javascript</span>
+            </div>
             <p class="fs15 card-sub">With fully automated Login/Register system and Quotation Engine</p>
             <p class="fs13 align-right">View <a href="https://barlow-blinds-new-website.uk-siteglide.com/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://byrom-new-site.uk-siteglide.com/" target="_blank"><img class="img-responsive" src="./images/Byrom.webp" alt="Byrom Audiology"></a>
-            <h4 class="title04">Byrom Audiology<br><small class="fs13 cat liquid">Liquid / Tailwind</small></h4>
+            <h4 class="title04">Byrom Audiology</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Siteglide</span>
+              <span class="tech-pill">Liquid</span>
+              <span class="tech-pill">Tailwind</span>
+              <span class="tech-pill">Javascript</span>
+            </div>
             <p class="fs15 card-sub">With fully email automated Forms and E-Commerce</p>
             <p class="fs13 align-right">View <a href="https://byrom-new-site.uk-siteglide.com/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://www.studyfromhome.co.uk/" target="_blank"><img class="img-responsive" src="./images/SFH.webp" alt="Study From Home"></a>
-            <h4 class="title04">Study From Home<br><small class="fs13 cat liquid">Liquid / Tailwind</small></h4>
+            <h4 class="title04">Study From Home</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Siteglide</span>
+              <span class="tech-pill">Liquid</span>
+              <span class="tech-pill">Tailwind</span>
+              <span class="tech-pill">Javascript</span>
+            </div>
             <p class="fs15 card-sub">With fully email automated Forms and E-Commerce</p>
             <p class="fs13 align-right">View <a href="https://www.studyfromhome.co.uk/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://www.transportldp.co.uk/" target="_blank"><img class="img-responsive" src="./images/LDP.webp" alt="LDP Transport"></a>
-            <h4 class="title04">LDP Transport<br><small class="fs13 cat liquid">Liquid / Tailwind</small></h4>
+            <h4 class="title04">LDP Transport</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Siteglide</span>
+              <span class="tech-pill">Liquid</span>
+              <span class="tech-pill">Tailwind</span>
+              <span class="tech-pill">Javascript</span>
+            </div>
             <p class="fs15 card-sub">With fully email automated Forms and Login/Register</p>
             <p class="fs13 align-right">View <a href="https://www.transportldp.co.uk/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://www.hortonssteamfair.co.uk/" target="_blank"><img class="img-responsive" src="./images/Hortons.webp" alt="Hortons"></a>
-            <h4 class="title04">Hortons<br><small class="fs13 cat liquid">Liquid / Tailwind</small></h4>
+            <h4 class="title04">Hortons</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Siteglide</span>
+              <span class="tech-pill">Liquid</span>
+              <span class="tech-pill">Tailwind</span>
+              <span class="tech-pill">Javascript</span>
+            </div>
             <p class="fs15 card-sub">With fully email automated Forms</p>
             <p class="fs13 align-right">View <a href="https://www.hortonssteamfair.co.uk/" target="_blank" class="code-anchor"><code>Site</code></a></p>
           </div>
@@ -388,63 +527,85 @@
       </section>
 
       <!-- Static Websites -->
-      <section class="section" id="websites">
-        <h2 class="title02">Static Websites<span class="underscore">_</span></h2>
-        <div class="margin-btm20"><small>// web_projects</small></div>
+      <section class="section" id="websites" role="tabpanel">
         <div class="flex-container">
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/devtest/" target="_blank"><img class="img-responsive" src="./images/get-an.png" alt="Intervention"></a>
-            <h4 class="title04">Intervention<br><small class="fs13 cat sass">SCSS</small></h4>
+            <h4 class="title04">Intervention</h4>
+            <div class="card-meta">
+              <span class="tech-pill">SCSS</span>
+            </div>
             <p class="fs14 card-sub">Simple modern front page UI</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/devtest" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://tokyomice.org/" target="_blank"><img class="img-responsive" src="./images/tokyo-mice.png" alt="Tokyo Mice"></a>
-            <h4 class="title04">Tokyo Mice<br><small class="fs13 cat javascript">Javascript</small></h4>
+            <h4 class="title04">Tokyo Mice</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
             <p class="fs14 card-sub">A Japanese industrial style website</p>
             <p class="fs13 align-right">View <a href="https://tokyomice.org/" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/icannSoln/" target="_blank"><img class="img-responsive" src="./images/icannThumb.png" alt="I Cann"></a>
-            <h4 class="title04">I Cann<br><small class="fs13 cat javascript">Javascript</small></h4>
+            <h4 class="title04">I Cann</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
             <p class="fs14 card-sub">Simple travel website</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/icannSoln" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/test-task--front-end/" target="_blank"><img class="img-responsive" src="./images/nhb.png" alt="BEN"></a>
-            <h4 class="title04">BEN<br><small class="fs13 cat css">CSS</small></h4>
+            <h4 class="title04">BEN</h4>
+            <div class="card-meta">
+              <span class="tech-pill">CSS</span>
+            </div>
             <p class="fs14 card-sub">Simple social UI front page</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/test-task--front-end" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/tw-a/" target="_blank"><img class="img-responsive" src="./images/manage-min.png" alt="Manage"></a>
-            <h4 class="title04">Manage<br><small class="fs13 cat tailwind">Tailwind</small></h4>
+            <h4 class="title04">Manage</h4>
+            <div class="card-meta">
+              <span class="tech-pill">Tailwind</span>
+            </div>
             <p class="fs14 card-sub">Example page written in Tailwind</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/tw-a" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/nickles/" target="_blank"><img class="img-responsive" src="./images/nickles.png" alt="Nickles"></a>
-            <h4 class="title04">Nickles<br><small class="fs13 cat javascript">Javascript</small></h4>
+            <h4 class="title04">Nickles</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
             <p class="fs14 card-sub">A simple picture gallery site.</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/nickles" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/bcr/" rel="noopener noreferrer" target="_blank"><img class="img-responsive" src="./images/BCR.png" alt="Project Landing Page"></a>
-            <h4 class="title04">Project Landing Page<br><small class="fs13 cat css">CSS</small></h4>
+            <h4 class="title04">Project Landing Page</h4>
+            <div class="card-meta">
+              <span class="tech-pill">CSS</span>
+            </div>
             <p class="fs14 card-sub">BEM methodology</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/bcr" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/blg/" rel="noopener noreferrer" target="_blank"><img class="img-responsive" src="./images/lechon-blog.png" alt="Lechon"></a>
-            <h4 class="title04">Lechon<br><small class="fs13 cat css">CSS</small></h4>
+            <h4 class="title04">Lechon</h4>
+            <div class="card-meta">
+              <span class="tech-pill">CSS</span>
+            </div>
             <p class="fs14 card-sub">Simple Japanese blog page</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/blg" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
@@ -452,109 +613,95 @@
         </div>
       </section>
 
-      <!-- Mini Games -->
-      <section class="section" id="games">
-        <h2 class="title02">Mini Games<span class="underscore">_</span></h2>
-        <div class="margin-btm20"><small>// mini_game_projects</small></div>
-        <div class="flex-container">
-
-          <div class="flex-item4 card-item">
-            <a href="https://benringia.github.io/speechRecognitionApp/" rel="noopener noreferrer" target="_blank"><img class="img-responsive" src="./images/Speech_recog_thumb.png" alt="Guessing Game"></a>
-            <h4 class="title04">Guessing Game<br><small class="fs13 cat javascript">Javascript</small></h4>
-            <p class="fs14 card-sub">Simple number guessing game.</p>
-            <p class="fs13 align-right">View <a href="https://github.com/benringia/speechRecognitionApp" target="_blank" class="code-anchor"><code>Code</code></a></p>
-          </div>
-
-          <div class="flex-item4 card-item">
-            <a href="https://benringia.github.io/simple-hangman/"><img class="img-responsive" src="./images/hangman_thumb.png" alt="Hangman"></a>
-            <h4 class="title04">Hangman<br><small class="fs13 cat javascript">Javascript</small></h4>
-            <p class="fs15 card-sub">A simple hangman game written in JS</p>
-            <p class="fs13 align-right">View <a href="https://github.com/benringia/simple-hangman" class="code-anchor"><code>Code</code></a></p>
-          </div>
-
-          <div class="flex-item4 card-item">
-            <a href="https://benringia.github.io/physicsengine/" target="_blank"><img class="img-responsive" src="./images/physicsEng_thumb.png" alt="Physics Engine"></a>
-            <h4 class="title04">Physics Engine<br><small class="fs13 cat javascript">Javascript</small></h4>
-            <p class="fs15 card-sub">MatterJS practice</p>
-            <p class="fs13 align-right">View <a href="https://github.com/benringia/physicsengine" target="_blank" class="code-anchor"><code>Code</code></a></p>
-          </div>
-
-          <div class="flex-item4 card-item">
-            <a href="https://benringia.github.io/matter-maze/" target="_blank"><img class="img-responsive" src="./images/maze_thumb.png" alt="Maze"></a>
-            <h4 class="title04">Maze<br><small class="fs13 cat javascript">Javascript</small></h4>
-            <p class="fs15 card-sub">A simple MatterJS maze game.</p>
-            <p class="fs13 align-right">View <a href="https://github.com/benringia/matter-maze" target="_blank" class="code-anchor"><code>Code</code></a></p>
-          </div>
-
-        </div>
-      </section>
+     
 
       <!-- JavaScript Apps -->
-      <section class="section" id="jsapps">
-        <h2 class="title02">Javascript Apps<span class="underscore">_</span></h2>
-        <div class="margin-btm20"><small>// vanilla_js_projects</small></div>
+      <section class="section" id="jsapps" role="tabpanel">
         <div class="flex-container">
+          
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/speechtextreader/" rel="noopener noreferrer" target="_blank"><img class="img-responsive" src="./images/SpeechReader-Desktop.png" alt="Speech Reader"></a>
-            <h4 class="title04">Speech Reader<br><small class="fs13 cat javascript">Javascript</small></h4>
+            <h4 class="title04">Speech Reader</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
             <p class="fs15 card-sub">Simple voice speech reader</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/speechtextreader" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/form-validator/" target="_blank"><img class="img-responsive" src="./images/form_thumb.png" alt="Form Validator"></a>
-            <h4 class="title04">Form Validator<br><small class="fs13 cat javascript">Javascript</small></h4>
+            <h4 class="title04">Form Validator</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
             <p class="fs15 card-sub">Simple Javascript front-end form</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/form-validator" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/movieseat-selector/" target="_blank"><img class="img-responsive" src="./images/seat_thumb.png" alt="Seat Selector"></a>
-            <h4 class="title04">Seat Selector<br><small class="fs13 cat javascript">Javascript</small></h4>
+            <h4 class="title04">Seat Selector</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
             <p class="fs15 card-sub">Simple Javascript seat selector app.</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/movieseat-selector" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
 
           <div class="flex-item4 card-item">
             <a href="https://benringia.github.io/exchangerate-calc/" target="_blank"><img class="img-responsive" src="./images/calc.png" alt="Exchange Rate"></a>
-            <h4 class="title04">Exchange Rate<br><small class="fs13 cat javascript">Javascript</small></h4>
+            <h4 class="title04">Exchange Rate</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
             <p class="fs15 card-sub">Exchange rate calculator made with JS</p>
             <p class="fs13 align-right">View <a href="https://github.com/benringia/exchangerate-calc" target="_blank" class="code-anchor"><code>Code</code></a></p>
           </div>
+          <div class="flex-item4 card-item">
+            <a href="https://benringia.github.io/speechRecognitionApp/" rel="noopener noreferrer" target="_blank"><img class="img-responsive" src="./images/Speech_recog_thumb.png" alt="Guessing Game"></a>
+            <h4 class="title04">Guessing Game</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
+            <p class="fs14 card-sub">Simple number guessing game.</p>
+            <p class="fs13 align-right">View <a href="https://github.com/benringia/speechRecognitionApp" target="_blank" class="code-anchor"><code>Code</code></a></p>
+          </div>
 
+          <div class="flex-item4 card-item">
+            <a href="https://benringia.github.io/simple-hangman/"><img class="img-responsive" src="./images/hangman_thumb.png" alt="Hangman"></a>
+            <h4 class="title04">Hangman</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
+            <p class="fs15 card-sub">A simple hangman game written in JS</p>
+            <p class="fs13 align-right">View <a href="https://github.com/benringia/simple-hangman" class="code-anchor"><code>Code</code></a></p>
+          </div>
+
+          <div class="flex-item4 card-item">
+            <a href="https://benringia.github.io/physicsengine/" target="_blank"><img class="img-responsive" src="./images/physicsEng_thumb.png" alt="Physics Engine"></a>
+            <h4 class="title04">Physics Engine</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
+            <p class="fs15 card-sub">MatterJS practice</p>
+            <p class="fs13 align-right">View <a href="https://github.com/benringia/physicsengine" target="_blank" class="code-anchor"><code>Code</code></a></p>
+          </div>
+
+          <div class="flex-item4 card-item">
+            <a href="https://benringia.github.io/matter-maze/" target="_blank"><img class="img-responsive" src="./images/maze_thumb.png" alt="Maze"></a>
+            <h4 class="title04">Maze</h4>
+            <div class="card-meta">
+              <span class="tech-pill">JavaScript</span>
+            </div>
+            <p class="fs15 card-sub">A simple MatterJS maze game.</p>
+            <p class="fs13 align-right">View <a href="https://github.com/benringia/matter-maze" target="_blank" class="code-anchor"><code>Code</code></a></p>
+          </div>
         </div>
       </section>
 
-      <!-- PHP Projects -->
-      <section class="section" id="phpapps">
-        <h2 class="title02">PHP Projects<span class="underscore">_</span></h2>
-        <div class="margin-btm20"><small>// php · wordpress</small></div>
-        <div class="flex-container">
-
-          <div class="flex-item4 card-item">
-            <a href="https://github.com/benringia/blogsmith" target="_blank"><img class="img-responsive" src="./images/blogsmith.png" alt="Blogsmith"></a>
-            <h4 class="title04">Blogsmith<br><small class="fs13 cat php">PHP</small></h4>
-            <p class="fs14 card-sub">A CMS App — WordPress Admin mini clone (In Development)</p>
-            <p class="fs13 align-right">View <a href="https://github.com/benringia/blogsmith" target="_blank" class="code-anchor"><code>Code</code></a></p>
-          </div>
-
-          <div class="flex-item4 card-item">
-            <a href="https://shkt-nonai.jp/" target="_blank"><img class="img-responsive" src="./images/shkt-nonai.png" alt="Nonai"></a>
-            <h4 class="title04">Nonai<br><small class="fs13 cat php">PHP</small></h4>
-            <p class="fs14 card-sub">A Japanese website made with WP custom theme / PHP</p>
-            <p class="fs13 align-right">View <a href="https://github.com/benringia/shkt-nonai" target="_blank" class="code-anchor"><code>Code</code></a></p>
-          </div>
-
-          <div class="flex-item4 card-item">
-            <a href="https://github.com/benringia/the-hall" target="_blank"><img class="img-responsive" src="./images/the-hall.png" alt="Hall"></a>
-            <h4 class="title04">Hall<br><small class="fs13 cat php">PHP</small></h4>
-            <p class="fs14 card-sub">A WP Theme with a custom WP plugin — all made from scratch</p>
-            <p class="fs13 align-right">View <a href="https://github.com/benringia/the-hall" target="_blank" class="code-anchor"><code>Code</code></a></p>
-          </div>
-
-        </div>
-      </section>
+      
 
     </div><!-- /.content -->
 
